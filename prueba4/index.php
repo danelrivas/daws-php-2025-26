@@ -1,0 +1,5 @@
+<?php 
+    $nombre = "danel";
+?>
+
+<?= $nombre ?>
