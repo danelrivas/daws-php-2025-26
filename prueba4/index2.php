@@ -1,5 +1,0 @@
-<?php 
-    $nombre = "danel";
-?>
-
-<?= $nombre ?>
