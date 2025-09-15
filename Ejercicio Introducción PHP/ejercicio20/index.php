@@ -12,6 +12,8 @@
         }
         return $suma;
     }
+
+    //DIVIDIR en 2 funciones (Comprobar par / Sumar)
     
     include 'index.view.php'
 ?>
