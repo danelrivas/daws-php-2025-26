@@ -1,5 +1,5 @@
 <?php
-    $resultado = 0;
+    $resultado = null;
     $temperatura = $_POST["temperatura"];
     //    $temperatura = isset($_POST["temperatura"]) ? $_POST["temperatura"] : "";
     $unidad = $_POST["unidad"];
