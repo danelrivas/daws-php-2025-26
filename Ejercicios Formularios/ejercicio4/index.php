@@ -21,6 +21,17 @@ $usuarios = [
 $Error_Mssg = [1 => "Password incorrecto", 2 => "Usuario Incorrecto"];
 
 
+function validar($usuarios, $user, $passwd)
+{
+    if (isset($usuarios[$user])) {
+        if ($usuarios[$user]["password"] === $passwd) {
+            return 0;
+        }
+        return 1;
+    }
+    return 2;
+}
+
 
 if (!empty($_GET['usr']) || !empty($_GET['passwd'])) {
     $enviado = true;
@@ -37,15 +48,4 @@ if (!empty($_GET['usr']) || !empty($_GET['passwd'])) {
     }
 } else {
     include "index.login.view.php";
-}
-
-function validar($usuarios, $user, $passwd)
-{
-    if (isset($usuarios[$user])) {
-        if ($usuarios[$user]["password"] === $passwd) {
-            return 0;
-        }
-        return 1;
-    }
-    return 2;
 }
